@@ -7,7 +7,7 @@ int n_printed = 0;
 va_start(args, format);
 while (*format != '\0')
 {
-if(*format != '%')
+if (*format != '%')
 {
 _putchar(*format);
 n_printed++;
@@ -15,12 +15,12 @@ n_printed++;
 else
 {
 format++;
-if(*format == 'c')
+if (*format == 'c')
 {
-putchar(va_arg(args, int));
+_putchar(va_arg(args, int));
 n_printed++;
 }
-else if(*format == 's')
+else if (*format == 's')
 {
 string = va_arg(args, char *);
 while (*string != '\0')
