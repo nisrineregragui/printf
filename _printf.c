@@ -1,5 +1,11 @@
 #include "main.h"
-/*printf*/int _printf(const char *format, ...)/*f*/
+/**
+ * _printf - function printf
+ * @format: format
+ * Return: 1 or -1
+ */
+
+int _printf(const char *format, ...)/*f*/
 {
 	va_list args;
 	char *string;
