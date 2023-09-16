@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 
 int print_handler(const char *format, va_list args)
 {
-	int i = 0; 
+	int i = 0;
 	int len = 0;
 
 	while (format[i] != '\0')

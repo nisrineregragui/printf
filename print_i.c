@@ -16,14 +16,14 @@ int print_hex(unsigned int n, unsigned int c)
 	int count = 0;
 
 	a[0] = n / m;
-    i = 1;
+	i = 1;
 	while (i < 8)
 	{
 		m /= 16;
 		a[i] = (n / m) % 16;
-        i++;
+	i++;
 	}
-    i = 0;
+	i = 0;
 	while (i < 8)
 	{
 		if (a[i] || count)
@@ -34,7 +34,7 @@ int print_hex(unsigned int n, unsigned int c)
 				_putchar('0' + diff + a[i]);
 			count++;
 		}
-        i++;
+	i++;
 	}
 	return (count);
 }
