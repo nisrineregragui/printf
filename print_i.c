@@ -7,6 +7,7 @@
  *
  * Return: print number of digits
  */
+
 int print_hex(unsigned int n, unsigned int c)
 {
 	unsigned int a[8];
@@ -44,6 +45,7 @@ int print_hex(unsigned int n, unsigned int c)
  *
  * Return: number of digits printed
  */
+
 int print_x(va_list x)
 {
 	return (print_hex(va_arg(x, unsigned int), 0));
@@ -55,6 +57,7 @@ int print_x(va_list x)
  *
  * Return: number of digits printed
  */
+
 int print_X(va_list X)
 {
 	return (print_hex(va_arg(X, unsigned int), 1));
@@ -67,6 +70,7 @@ int print_X(va_list X)
  *
  * Return: base ^ exponent
  */
+
 static unsigned long _power(unsigned int base, unsigned int exponent)
 {
 	unsigned long ans = base;
@@ -83,6 +87,7 @@ static unsigned long _power(unsigned int base, unsigned int exponent)
  *
  * Return: number of characters to print
  */
+
 int print_p(va_list p)
 {
 	unsigned long n = va_arg(p, unsigned long);
@@ -123,3 +128,4 @@ int print_p(va_list p)
 	}
 	return (count);
 }
+
