@@ -33,10 +33,9 @@ int _printf(const char *format, ...)
 
 int print_handler(const char *format, va_list args)
 {
-	int i = 0;
-	int len = 0;
+	int i, len = 0;
 
-	while (format[i] != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -68,7 +67,6 @@ int print_handler(const char *format, va_list args)
 		{
 			len += _putchar(format[i]);
 		}
-		i++;
 	}
 	return (len);
 }
