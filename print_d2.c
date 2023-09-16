@@ -10,13 +10,13 @@ int print_d(int num)
 {
     int len = 0, i;
     int digits[10];
-    int a = 0;
+    int a = 0, nega = 0;
 
     if (num < 0)
     {
-        a = 1;
+        a++;
         num *= -1;
-        len++; /* Increment len for the minus sign*/
+        nega++;
     }
 
     while (num > 0)
@@ -31,10 +31,15 @@ int print_d(int num)
         if (a == 1)
         {
             _putchar('-');
-            a = 0;
-        }
-        _putchar(digits[i] + '0');
+            a = 0;
+        }
+	_putchar(digits[i] + '0');
+    }
+    if (nega == 1)
+    {
+            len++;
     }
 
     return len;
 }
+
