@@ -1,6 +1,6 @@
 #include "main.h"
 /*comment*/
-/*s*/int bin(int num)/*s*/
+/*s*/int bin(unsigned int num)/*s*/
 {
 unsigned int binary[32], i = 0, len = 0;
 	while(num > 2)
