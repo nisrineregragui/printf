@@ -15,7 +15,7 @@ int print_d(int num)
     if (num < 0)
     {
         a = 1;
-        num = -num;
+        num *= -1;
         len++; // Increment len for the minus sign
     }
 
