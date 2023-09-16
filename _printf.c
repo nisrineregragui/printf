@@ -7,7 +7,6 @@
  *
  * Return: the number of characters printed, or -1 if an error occurred
  */
-
 int _printf(const char *format, ...)
 {
 	va_list(args);
@@ -55,6 +54,10 @@ int print_handler(const char *format, va_list args)
 				case 'd':
 					len += print_d(va_arg(args, int));
 					break;
+				case 'b':
+					len += bin(va_arg(args, unsigned int));
+					break;
+
 				default:
 					len += _putchar('%');
 					len += _putchar(format[i]);
