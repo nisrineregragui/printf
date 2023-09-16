@@ -1,8 +1,8 @@
 #include "main.h"
 /*comment*/
-/*s*/int bin(num)/*s*/
+/*s*/int bin(int num)/*s*/
 {
-unsigned int binary[32], i = 0, len = 0,num;
+unsigned int binary[32], i = 0, len = 0;
 	while(num > 2)
 		{
 			binary[i] = num % 2;
