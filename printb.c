@@ -2,7 +2,8 @@
 /*comment*/
 /*s*/int bin(unsigned int num)/*s*/
 {
-unsigned int binary[32], i = 0, len = 0;
+unsigned int binary[32], i = 0;
+int len = 0;
 	while(num > 2)
 		{
 			binary[i] = num % 2;
