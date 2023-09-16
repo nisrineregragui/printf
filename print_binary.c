@@ -1,11 +1,10 @@
 #include "main.h"
 /*comment*/
-/*s*/int bin(va_list args)/*s*/
+/*s*/int bin(unsigned int num)/*s*/
 {
-unsigned int binary[32], num;
+unsigned int binary[32];
 int i = 0;
 int len = 0;
-num = va_arg(args, unsigned int);
 while(num > 2)
                 {
                         binary[i] = num % 2;
