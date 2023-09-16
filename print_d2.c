@@ -31,15 +31,13 @@ int print_d(int num)
         if (a == 1)
         {
             _putchar('-');
-            a = 0;
-        }
-	_putchar(digits[i] + '0');
+            a = 0;
+        }   _putchar(digits[i] + '0');
     }
     if (nega == 1)
     {
             len++;
     }
 
-    return len;
+    return len;
 }
-
