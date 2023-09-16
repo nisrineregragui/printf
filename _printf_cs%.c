@@ -9,12 +9,14 @@ int _printf(const char *format, ...)/*f*/
 {
 	va_list args;
 	char *string;
-	int n_printed = 0;
+	int n_printed = 0, a;
+
 	va_start(args, format);
 	while (*format != '\0')
 	{
 		if (*format != '%')
 		{
+			a = 0; /*..*/
 			_putchar(*format);
 			n_printed++;
 		}
@@ -31,6 +33,12 @@ int _printf(const char *format, ...)/*f*/
 				string = va_arg(args, char *);
 				while (*string != '\0')
 				{
+					if (*string == '%') /*just added this condition i will check it later*/
+					{
+						n_printed++;
+						a = 1;
+						break;
+					}
 					_putchar(*string);
 					string++;
 					n_printed++;
@@ -42,7 +50,10 @@ int _printf(const char *format, ...)/*f*/
 				n_printed++;
 			}
 		}
-		format++;
+		if (a == 0) /*....*/
+		{
+			format++;
+		}
 	}
 	va_end(args);
 	return (n_printed);
