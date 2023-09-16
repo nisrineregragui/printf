@@ -15,14 +15,9 @@ int print_d(int num)
                 i += _putchar('-');
                 num = -num;
         }
-        else if (num >= 0 && num <= 9)
-                {
-			i += _putchar(num + '0');
-		}
-	else if (num > 9)
-	{               i += print_d(num / 10);
-
-                i += _putchar(num % 10 + '0');
+        if (num / 10 == 1)
+	{    i += print_d(num / 10);
 	}
+                i += _putchar(num%10 + '0');
         return (i);
 }
