@@ -9,7 +9,7 @@
 int print_d(int num)
 {
         int len = 0, i;
-        int digits[10];
+        int digits[15];
 	int a = 0, nega = 0;
 	if (num < 0)
 	{
