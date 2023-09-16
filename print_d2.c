@@ -22,7 +22,7 @@ int print_d(int num)
 		i += print_d(-num);
 	}
 	else if (num >= 0 && num <= 9)
-		i += _putchar(n + '0');
+		i += _putchar(num + '0');
 	else
 	{
 		i += print_d(num / 10);
