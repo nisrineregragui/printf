@@ -17,7 +17,11 @@ int print_d(int num)
 	num *= -1;
 	nega++;
 	}
-
+	if (num == 0)
+	{
+	len++;
+		_putchar(0 + '0')
+	}
         while (num > 0)
         {
                 digits[len] = num % 10;
