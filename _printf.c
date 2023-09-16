@@ -55,6 +55,9 @@ int print_handler(const char *format, va_list args)
 				case 'd':
 					len += print_d(va_arg(args, int));
 					break;
+				case 'i':
+					len += print_d(va_arg(args, int));
+					break;
 				default:
 					len += _putchar('%');
 					len += _putchar(format[i]);
