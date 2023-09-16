@@ -55,10 +55,6 @@ int print_handler(const char *format, va_list args)
 				case 'd':
 					len += print_d(va_arg(args, int));
 					break;
-				case 'b':
-					len += bin(va_arg(args, unsigned int));
-					break;
-
 				default:
 					len += _putchar('%');
 					len += _putchar(format[i]);
