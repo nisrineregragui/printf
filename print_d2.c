@@ -8,36 +8,25 @@
 
 int print_d(int num)
 {
-    int len = 0, i;
-    int digits[10];
-    int a = 0, nega = 0;
+    int i = 0;
 
-    if (num < 0)
-    {
-        a++;
-        num *= -1;
-        nega++;
-    }
+	if (num < 0)
+	{
+		i += _putchar('-');
+		if (num == -2147483648)
+		{
+			i += _putchar('2');
+			num %= 1000000000;
+		}
 
-    while (num > 0)
-    {
-        digits[len] = num % 10;
-        num /= 10;
-        len++;
-    }
-
-    for (i = len - 1; i >= 0; i--)
-    {
-        if (a == 1)
-        {
-            _putchar('-');
-            a = 0;
-        }   _putchar(digits[i] + '0');
-    }
-    if (nega == 1)
-    {
-            len++;
-    }
-
-    return len;
+		i += print_d(-num);
+	}
+	else if (num >= 0 && num <= 9)
+		i += _putchar(n + '0');
+	else
+	{
+		i += print_d(num / 10);
+		i += print_d(num % 10);
+	}
+	return (i);
 }
