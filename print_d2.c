@@ -10,12 +10,12 @@ int print_d(int num)
 {
         int len = 0, i;
         int digits[10];
-	int a = 0;
+	int a = 0, nega = 0;
 	if(num < 0)
 	{
 	a = 1;
-	num = -num;
-	}
+	num *= -1;
+	nega = 1;}
         while (num > 0)
         {
                 digits[len] = num % 10;
@@ -32,5 +32,9 @@ int print_d(int num)
 	}
                 _putchar(digits[i] + '0');
         }
+	if (nega == 1)
+	{
+	len++;
+	}
 	return (len);
 }
