@@ -8,7 +8,7 @@
 
 int print_d(int num)
 {
-    int i = 0;
+	int i = 0;
 
 	if (num < 0)
 	{

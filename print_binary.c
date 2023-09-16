@@ -1,6 +1,5 @@
 #include "main.h"
-/*comment*/
-/*s*/int bin(unsigned int num)/*s*/
+/*s*/int print_binary(unsigned int num)/*s*/
 {
 unsigned int binary[32];
 int i = 0, len = 0;
