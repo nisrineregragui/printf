@@ -20,7 +20,7 @@ int print_d(int num)
 	if (num == 0)
 	{
 	len++;
-		_putchar(0 + '0')
+		_putchar(0 + '0');
 	}
         while (num > 0)
         {
