@@ -17,4 +17,4 @@ len = _putchar(binary[i] + '0');
 i--;
 }
 return len;
-
+}
