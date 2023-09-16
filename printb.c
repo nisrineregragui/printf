@@ -13,7 +13,7 @@ i++;
 binary[i]= 1;
 while (i >= 0)
 {
-len = _putchar(binary[i] + '0');
+len += _putchar(binary[i] + '0');
 i--;
 }
 return len;
