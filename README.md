@@ -8,10 +8,7 @@ The printf function takes a format string and a variable number of arguments, an
 
 In this project, we will be implementing a simplified version of printf, which supports the following format specifiers:
 
-%c - print a single character
-
-%s - print a null-terminated string
-
-%d -print a signed decimal integer
-
-%i - print a signed decimal integer (same as %d)
++ %c - print a single character
++ %s - print a null-terminated string
++ %d -print a signed decimal integer
++ %i - print a signed decimal integer (same as %d)
