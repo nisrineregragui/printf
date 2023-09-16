@@ -16,7 +16,7 @@ int print_d(int num)
     {
         a = 1;
         num *= -1;
-        len++; // Increment len for the minus sign
+        len++; /* Increment len for the minus sign*/
     }
 
     while (num > 0)
