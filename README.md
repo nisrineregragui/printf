@@ -12,3 +12,4 @@ In this project, we will be implementing a simplified version of printf, which s
 + %s - print a null-terminated string
 + %d -print a signed decimal integer
 + %i - print a signed decimal integer (same as %d)
++ %u - print an unsigned decimal integer
