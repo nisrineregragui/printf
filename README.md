@@ -14,3 +14,4 @@ In this project, we will be implementing a simplified version of printf, which s
 + %i - print a signed decimal integer (same as %d)
 + %u - print an unsigned decimal integer
 + %x - print an unsigned hexadecimal integer (lowercase)
++ %X - print an unsigned hexadecimal integer (uppercase)
