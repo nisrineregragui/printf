@@ -59,6 +59,7 @@ int print_handler(const char *format, va_list args)
 					break;
 				case 'b':
 					len += _print_hex(va_arg(args, unsigned int), format);
+					break;
 				default:
 					len += _putchar('%');
 					len += _putchar(format[i]);
