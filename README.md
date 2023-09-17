@@ -30,4 +30,28 @@ In this project, we will be implementing a simplified version of printf, which s
 + Don’t forget to push your header file
 + All your header files should be include guarded
 
+# Authorized functions and macros
 
++ write (man 2 write)
++ malloc (man 3 malloc)
++ free (man 3 free)
++ va_start (man 3 va_start)
++ va_end (man 3 va_end)
++ va_copy (man 3 va_copy)
++ va_arg (man 3 va_arg)
+
+# Getting Started
+
+To get started with this project, you should clone the project repository from GitHub:
+
++ git clone https://github.com/nisrineregragui/printf
+Once you have cloned the repository, you can begin implementing the required functions in the printf.c file. You can test your implementation using the provided main.c file, which contains some basic test cases.
+
+To compile and run the test cases, you can use the following commands:
+
++ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c -o printf
++ ./printf
+# Contributions
+This project is open to contributions from the ALX community. If you find a bug, or have a suggestion for an improvement, please create an issue on GitHub or submit a pull request with your changes.
+
+By <span style="color: red;">Yassir Elyasini</span> and <span style="color: red;">nisrineregragui</span>
