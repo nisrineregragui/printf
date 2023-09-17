@@ -60,9 +60,6 @@ int print_handler(const char *format, va_list args)
 				case 'b':
 					len += _print_hex(va_arg(args, unsigned int), format[i]);
 					break;
-				case 'u':
-					len += _print_hex(va_arg(args, unsigned int), format[i]);
-					break;
 				case 'o':
 					len += _print_hex(va_arg(args, unsigned int), format[i]);
 					break;
