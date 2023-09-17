@@ -11,6 +11,7 @@ int print_d(int num);
 int print_s(char *str);
 int print_handler(const char *format, va_list args);
 int _print_hex(unsigned long int num, char heex);
+int print_u(unsigned int num);
 
 int print_hex(unsigned int n, unsigned int c);
 int print_x(va_list x);

@@ -52,3 +52,23 @@ int _print_hex(unsigned long int num, char heex)
     return (i);
 
 }
+
+/**
+ * print_u - function print unsigned numbers
+ * @num: number
+ * Return: number of bytes
+ */
+
+int print_u(unsigned int num)
+{
+	int i = 0;
+
+	if (num <= 9)
+		i += _putchar(num + 48);
+	else
+	{
+		i += print_u(num / 10);
+		i += print_u(num % 10);
+	}
+	return (i);
+}
