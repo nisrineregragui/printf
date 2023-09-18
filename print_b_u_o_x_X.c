@@ -34,7 +34,7 @@ void print_base(char *nbr, int length, char heex)
 	for (int y = length - 1; y >= 0; y--)
 	{
 		if (heex == 'x')
-        	_putchar(hex_l[(int)nbr[y]]);
+			_putchar(hex_l[(int)nbr[y]]);
 		else if (heex == 'X')
 			_putchar(hex_u[(int)nbr[y]]);
 		else
@@ -56,7 +56,7 @@ int _print_hex(unsigned long int num, char heex)
 	if (num == 0)
 	{
 		_putchar('0');
-		return 1;
+		return (1);
 	}
 
 	if (heex == 'b')
