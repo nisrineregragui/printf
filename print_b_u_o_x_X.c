@@ -1,26 +1,54 @@
 #include "main.h"
 
 /**
+ * convert_to_base - Function to convert a decimal number to the specified base and store the result in a character array
+ * @num: number
+ * @nbr: nbr
+ * @bs: base
+*/
+void convert_to_base(unsigned long int num, char *nbr, int bs) {
+	int i = 0;
+	while (num) {
+		int r = num % bs;
+		num = num / bs;
+		nbr[i] = r;
+		i++;
+	}
+}
+
+/**
+ * print_base - Function to print the converted number in the specified base
+ * @nbr: number
+ * @length: length
+ * @heex: heex
+*/
+void print_base(char *nbr, int length, char heex) {
+	char *hex_l = "0123456789abcdef";
+	char *hex_u = "0123456789ABCDEF";
+    
+	for (int y = length - 1; y >= 0; y--) {
+		if (heex == 'x')
+        	_putchar(hex_l[(int)nbr[y]]);
+		else if (heex == 'X')
+			_putchar(hex_u[(int)nbr[y]]);
+		else
+			_putchar(nbr[y] + '0');
+	}
+}
+
+/**
  * _print_hex - function print hex
  * @num: number
  * @heex: base
  * Return: integer
  */
-
-int _print_hex(unsigned long int num, char heex)
-{
-	int i = 0;
-	int y;
-	int r;
-	int bs;
+int _print_hex(unsigned long int num, char heex) {
 	char nbr[64];
-	char *hex_l = "0123456789abcdef";
-	char *hex_u = "0123456789ABCDEF";
+	int bs;
 
-	if (num == 0)
-	{
+	if (num == 0) {
 		_putchar('0');
-		return (1);
+		return 1;
 	}
 
 	if (heex == 'b')
@@ -30,26 +58,10 @@ int _print_hex(unsigned long int num, char heex)
 	else
 		bs = 16;
 
-	while (num)
-	{
-		r = num % bs;
-		num = num / bs;
-		nbr[i] = r;
-		i++;
-	}
-	y = i - 1;
+	convert_to_base(num, nbr, bs);
+	print_base(nbr, bs, heex);
 
-	while (y >= 0)
-	{
-		if (heex == 'x')
-			_putchar(hex_l[(int)nbr[y]]);
-		else if (heex == 'X')
-			_putchar(hex_u[(int)nbr[y]]);
-		else
-			_putchar(nbr[y] + '0');
-		y--;
-	}
-	return (i);
+	return bs;
 }
 
 /**
