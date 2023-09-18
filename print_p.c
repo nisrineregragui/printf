@@ -7,7 +7,7 @@
 int print_p(void *p)
 {
 int i = 0;
-unsigned long adress;
+unsigned long int adress;
 if (p == NULL)
 {
 i += _putchar('(');
