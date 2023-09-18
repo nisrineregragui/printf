@@ -26,6 +26,7 @@ int print_s(char *str)
 	{
 		len += _putchar(str[i]);
 	}
+	}
 	return (len);
 }
 
