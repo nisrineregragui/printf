@@ -13,7 +13,7 @@ int print_d(int num)
 	if (num < 0)
 	{
 		i += _putchar('-');
-		if (num == -2147483648)
+		if (num == INT_MIN)
 		{
 			i += _putchar('2');
 			num %= 1000000000;

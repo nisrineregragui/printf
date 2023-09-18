@@ -30,8 +30,9 @@ void print_base(char *nbr, int length, char heex)
 {
 	char *hex_l = "0123456789abcdef";
 	char *hex_u = "0123456789ABCDEF";
+	int y;
 
-	for (int y = length - 1; y >= 0; y--)
+	for (y = length - 1; y >= 0; y--)
 	{
 		if (heex == 'x')
 			_putchar(hex_l[(int)nbr[y]]);
