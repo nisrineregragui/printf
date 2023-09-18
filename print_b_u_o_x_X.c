@@ -11,7 +11,7 @@ void convert_to_base(unsigned long int num, char *nbr, int bs)
 	int i = 0;
 	int r;
 
-	while (num) 
+	while (num)
 	{
 		r = num % bs;
 		num = num / bs;
@@ -30,7 +30,7 @@ void print_base(char *nbr, int length, char heex)
 {
 	char *hex_l = "0123456789abcdef";
 	char *hex_u = "0123456789ABCDEF";
-    
+
 	for (int y = length - 1; y >= 0; y--)
 	{
 		if (heex == 'x')
