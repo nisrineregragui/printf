@@ -26,13 +26,12 @@ int print_s(char *str)
 	if (!(str[i] >= 32 && str[i] < 127))
 	{
 	len += _putchar('\\');
-	len += _putchar('\\');
 	len += _putchar('x');
 	if (str[i] <= 15)
 	{
 	len += _putchar('0');
-	len += _print_hex(str[i], 'X');
 	}
+	len += _print_hex(str[i], 'X');
 	}
 	else
 	{
