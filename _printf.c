@@ -94,3 +94,4 @@ int handle_unknown_format(char format)
 {
 	return (_putchar('%') + _putchar(format));
 }
+
