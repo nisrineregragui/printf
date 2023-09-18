@@ -22,7 +22,5 @@ void print_base(char *nbr, int length, char heex);
 int print_x(va_list x);
 int print_X(va_list X);
 int print_p(va_list p);
-int print_p(void *p);
 
 #endif
-

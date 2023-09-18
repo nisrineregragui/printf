@@ -11,34 +11,12 @@ int print_s(char *str)
 	int i, len = 0;
 
 	if (str == NULL)
-	{
-	_putchar('(');
-	_putchar('n');
-	_putchar('u');
-	_putchar('l');
-	_putchar('l');
-	_putchar(')');
-	return (6);
-	}
+		str = "(null)";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-	if (!(str[i] >= 32 && str[i] < 127))
-	{
-	len += _putchar('\\');
-	len += _putchar('x');
-	if (str[i] <= 15)
-	{
-	len += _putchar('0');
-	}
-	len += _print_hex(str[i], 'x');
-	}
-	else
-	{
 		len += _putchar(str[i]);
 	}
-	}
-
 	return (len);
 }
 
