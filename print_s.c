@@ -25,7 +25,7 @@ int print_s(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-	if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
+	if (!(str[i] >= 32 && str[i] < 127))
 	{
 	len += _putchar('\\');
 	len += _putchar('\\');
