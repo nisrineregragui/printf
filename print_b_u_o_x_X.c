@@ -8,12 +8,8 @@
  */
 int _print_hex(unsigned long int num, char heex)
 {
-	int i = 0;
-	int y;
-	int r;
-	int bs;
-	char nbr[64];
-	char *hex_l = "0123456789abcdef";
+	int i = 0, y, r, bs;
+	char nbr[64], *hex_l = "0123456789abcdef";
 	char *hex_u = "0123456789ABCDEF";
 
 	if (num == 0)
@@ -21,14 +17,12 @@ int _print_hex(unsigned long int num, char heex)
 		_putchar('0');
 		return (1);
 	}
-
 	if (heex == 'b')
 		bs = 2;
 	else if (heex == 'o')
 		bs = 8;
 	else
 		bs = 16;
-
 	while (num)
 	{
 		r = num % bs;
@@ -37,7 +31,6 @@ int _print_hex(unsigned long int num, char heex)
 		i++;
 	}
 	y = i - 1;
-
 	while (y >= 0)
 	{
 		if (heex == 'x')
