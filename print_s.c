@@ -31,7 +31,8 @@ int print_s(char *str)
 	{
 	len += _putchar('0');
 	}
-	len += _print_hex(str[i], 'X');
+	len += _putchar((str[i] >> 4) + '0');
+	len += _putchar((str[i] & 0xF) + '0');
 	}
 	else
 	{
