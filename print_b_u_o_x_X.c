@@ -9,7 +9,9 @@
 void convert_to_base(unsigned long int num, char *nbr, int bs)
 {
 	int i = 0;
-	while (num) {
+
+	while (num) 
+	{
 		int r = num % bs;
 		num = num / bs;
 		nbr[i] = r;
@@ -28,7 +30,8 @@ void print_base(char *nbr, int length, char heex)
 	char *hex_l = "0123456789abcdef";
 	char *hex_u = "0123456789ABCDEF";
     
-	for (int y = length - 1; y >= 0; y--) {
+	for (int y = length - 1; y >= 0; y--)
+	{
 		if (heex == 'x')
         	_putchar(hex_l[(int)nbr[y]]);
 		else if (heex == 'X')
@@ -49,7 +52,8 @@ int _print_hex(unsigned long int num, char heex)
 	char nbr[64];
 	int bs;
 
-	if (num == 0) {
+	if (num == 0)
+	{
 		_putchar('0');
 		return 1;
 	}
