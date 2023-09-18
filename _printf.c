@@ -33,22 +33,21 @@ int _printf(const char *format, ...)
 
 int print_handler(const char *format, va_list args)
 {
-    int i, len = 0;
+	int i, len = 0;
 
-    for (i = 0; format[i] != '\0'; i++)
-    {
-        if (format[i] == '%')
-        {
-            i++;
-            len += handle_format(format[i], args);
-        }
-        else
-        {
-            len += _putchar(format[i]);
-        }
-    }
-
-    return len;
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			len += handle_format(format[i], args);
+		}
+		else
+		{
+			len += _putchar(format[i]);
+		}
+	}
+	return len;
 }
 
 /**
@@ -59,27 +58,27 @@ int print_handler(const char *format, va_list args)
 */
 int handle_format(char format, va_list args)
 {
-    switch (format)
-    {
-        case 'c':
-            return _putchar(va_arg(args, int));
-        case 's':
-            return print_s(va_arg(args, char *));
-        case '%':
-            return _putchar('%');
-        case 'd':
-        case 'i':
-            return print_d(va_arg(args, int));
-        case 'b':
-        case 'o':
-        case 'x':
-        case 'X':
-            return _print_hex(va_arg(args, unsigned int), format);
-        case 'u':
-            return print_u(va_arg(args, unsigned int));
-        default:
-            return handle_unknown_format(format);
-    }
+	switch (format)
+	{
+		case 'c':
+			return _putchar(va_arg(args, int));
+		case 's':
+			return print_s(va_arg(args, char *));
+		case '%':
+			return _putchar('%');
+		case 'd':
+		case 'i':
+			return print_d(va_arg(args, int));
+		case 'b':
+		case 'o':
+		case 'x':
+		case 'X':
+			return _print_hex(va_arg(args, unsigned int), format);
+		case 'u':
+			return print_u(va_arg(args, unsigned int));
+		default:
+			return handle_unknown_format(format);
+	}
 }
 
 /**
@@ -90,5 +89,6 @@ int handle_format(char format, va_list args)
 
 int handle_unknown_format(char format)
 {
-    return _putchar('%') + _putchar(format);
+	return _putchar('%') + _putchar(format);
 }
+
