@@ -18,15 +18,20 @@ int print_s(char *str)
 	if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
 	{
 	len += _putchar('\\');
+	len += _putchar('\\');
         len += _putchar('x');
-        len += _putchar((str[i] >> 4) + '0');
-        len += _putchar((str[i] & 0xF) + '0');
+	if (s[i] <= 15)
+	{
+        len += _putchar('0');
+        len += _print_hex(s[i], 'X');
         }
+	}
 	else
 	{
 		len += _putchar(str[i]);
 	}
 	}
+
 	return (len);
 }
 
