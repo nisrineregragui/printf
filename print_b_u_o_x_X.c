@@ -1,6 +1,36 @@
 #include "main.h"
 
 /**
+ * _print_hex - function print hex
+ * @num: number
+ * @heex: base
+ * Return: integer
+ */
+int _print_hex(unsigned long int num, char heex)
+{
+	char nbr[64];
+	int bs;
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+	if (heex == 'b')
+		bs = 2;
+	else if (heex == 'o')
+		bs = 8;
+	else
+		bs = 16;
+
+	convert_to_base(num, nbr, bs);
+	print_base(nbr, bs, heex);
+
+	return (bs);
+}
+
+/**
  * convert_to_base - Function to convert a decimal
  * @num: number
  * @nbr: nbr
@@ -41,36 +71,6 @@ void print_base(char *nbr, int length, char heex)
 		else
 			_putchar(nbr[y] + '0');
 	}
-}
-
-/**
- * _print_hex - function print hex
- * @num: number
- * @heex: base
- * Return: integer
- */
-int _print_hex(unsigned long int num, char heex)
-{
-	char nbr[64];
-	int bs;
-
-	if (num == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-
-	if (heex == 'b')
-		bs = 2;
-	else if (heex == 'o')
-		bs = 8;
-	else
-		bs = 16;
-
-	convert_to_base(num, nbr, bs);
-	print_base(nbr, bs, heex);
-
-	return (bs);
 }
 
 /**
