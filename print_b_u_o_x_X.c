@@ -8,8 +8,13 @@
  */
 int _print_hex(unsigned long int num, char heex)
 {
-	char nbr[64];
+	int i = 0;
+	int y;
+	int r;
 	int bs;
+	char nbr[64];
+	char *hex_l = "0123456789abcdef";
+	char *hex_u = "0123456789ABCDEF";
 
 	if (num == 0)
 	{
@@ -24,23 +29,6 @@ int _print_hex(unsigned long int num, char heex)
 	else
 		bs = 16;
 
-	convert_to_base(num, nbr, bs);
-	print_base(nbr, bs, heex);
-
-	return (bs);
-}
-
-/**
- * convert_to_base - Function to convert a decimal
- * @num: number
- * @nbr: nbr
- * @bs: base
-*/
-void convert_to_base(unsigned long int num, char *nbr, int bs)
-{
-	int i = 0;
-	int r;
-
 	while (num)
 	{
 		r = num % bs;
@@ -48,21 +36,9 @@ void convert_to_base(unsigned long int num, char *nbr, int bs)
 		nbr[i] = r;
 		i++;
 	}
-}
+	y = i - 1;
 
-/**
- * print_base - Function to print the converted number
- * @nbr: number
- * @length: length
- * @heex: heex
-*/
-void print_base(char *nbr, int length, char heex)
-{
-	char *hex_l = "0123456789abcdef";
-	char *hex_u = "0123456789ABCDEF";
-	int y;
-
-	for (y = length - 1; y >= 0; y--)
+	while (y >= 0)
 	{
 		if (heex == 'x')
 			_putchar(hex_l[(int)nbr[y]]);
@@ -70,7 +46,9 @@ void print_base(char *nbr, int length, char heex)
 			_putchar(hex_u[(int)nbr[y]]);
 		else
 			_putchar(nbr[y] + '0');
+		y--;
 	}
+	return (i);
 }
 
 /**
