@@ -6,7 +6,8 @@
  * @nbr: nbr
  * @bs: base
 */
-void convert_to_base(unsigned long int num, char *nbr, int bs) {
+void convert_to_base(unsigned long int num, char *nbr, int bs)
+{
 	int i = 0;
 	while (num) {
 		int r = num % bs;
@@ -22,7 +23,8 @@ void convert_to_base(unsigned long int num, char *nbr, int bs) {
  * @length: length
  * @heex: heex
 */
-void print_base(char *nbr, int length, char heex) {
+void print_base(char *nbr, int length, char heex)
+{
 	char *hex_l = "0123456789abcdef";
 	char *hex_u = "0123456789ABCDEF";
     
@@ -42,7 +44,8 @@ void print_base(char *nbr, int length, char heex) {
  * @heex: base
  * Return: integer
  */
-int _print_hex(unsigned long int num, char heex) {
+int _print_hex(unsigned long int num, char heex)
+{
 	char nbr[64];
 	int bs;
 
