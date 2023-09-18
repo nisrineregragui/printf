@@ -33,56 +33,62 @@ int _printf(const char *format, ...)
 
 int print_handler(const char *format, va_list args)
 {
-	int i, len = 0;
+    int i, len = 0;
 
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			switch (format[i])
-			{
-				case 'c':
-					len += _putchar(va_arg(args, int));
-					break;
-				case 's':
-					len += print_s(va_arg(args, char *));
-					break;
-				case '%':
-					len += _putchar('%');
-					break;
-				case 'd':
-					len += print_d(va_arg(args, int));
-					break;
-				case 'i':
-					len += print_d(va_arg(args, int));
-					break;
-				case 'b':
-					len += _print_hex(va_arg(args, unsigned int), format[i]);
-					break;
-				case 'o':
-					len += _print_hex(va_arg(args, unsigned int), format[i]);
-					break;
-				case 'x':
-					len += _print_hex(va_arg(args, unsigned int), format[i]);
-					break;
-				case 'X':
-					len += _print_hex(va_arg(args, unsigned int), format[i]);
-					break;
-				case 'u':
-					len += print_u(va_arg(args, unsigned int));
-					break;
-				default:
-					len += _putchar('%');
-					len += _putchar(format[i]);
-					break;
-			}
-		}
-		else
-		{
-			len += _putchar(format[i]);
-		}
-	}
-	return (len);
+    for (i = 0; format[i] != '\0'; i++)
+    {
+        if (format[i] == '%')
+        {
+            i++;
+            len += handle_format(format[i], args);
+        }
+        else
+        {
+            len += _putchar(format[i]);
+        }
+    }
+
+    return len;
 }
 
+/**
+ * handle_format - entry point
+ * @format: format
+ * @args: args
+ * Return: Result
+*/
+int handle_format(char format, va_list args)
+{
+    switch (format)
+    {
+        case 'c':
+            return _putchar(va_arg(args, int));
+        case 's':
+            return print_s(va_arg(args, char *));
+        case '%':
+            return _putchar('%');
+        case 'd':
+        case 'i':
+            return print_d(va_arg(args, int));
+        case 'b':
+        case 'o':
+        case 'x':
+        case 'X':
+            return _print_hex(va_arg(args, unsigned int), format);
+        case 'u':
+            return print_u(va_arg(args, unsigned int));
+        default:
+            return handle_unknown_format(format);
+    }
+}
+
+/**
+ * handle_unknown_format - Handle unknown format specifiers here
+ * @format: format
+ * Return: Result
+*/
+
+int handle_unknown_format(char format)
+{
+    return _putchar('%') + _putchar(format);
+}
