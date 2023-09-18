@@ -12,15 +12,13 @@ int print_s(char *str)
 
 	if (str == NULL)
 	{
-	_putchar('"');
 	_putchar('(');
 	_putchar('n');
 	_putchar('u');
 	_putchar('l');
 	_putchar('l');
 	_putchar(')');
-	_putchar('"');
-	return (8);
+	return (6);
 	}
 
 	for (i = 0; str[i] != '\0'; i++)
@@ -29,12 +27,12 @@ int print_s(char *str)
 	{
 	len += _putchar('\\');
 	len += _putchar('\\');
-        len += _putchar('x');
+	len += _putchar('x');
 	if (str[i] <= 15)
 	{
-        len += _putchar('0');
-        len += _print_hex(str[i], 'X');
-        }
+	len += _putchar('0');
+	len += _print_hex(str[i], 'X');
+	}
 	}
 	else
 	{
