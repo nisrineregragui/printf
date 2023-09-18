@@ -9,10 +9,11 @@
 void convert_to_base(unsigned long int num, char *nbr, int bs)
 {
 	int i = 0;
+	int r;
 
 	while (num) 
 	{
-		int r = num % bs;
+		r = num % bs;
 		num = num / bs;
 		nbr[i] = r;
 		i++;
