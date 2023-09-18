@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * convert_to_base - Function to convert a decimal number to the specified base and store the result in a character array
+ * convert_to_base - Function to convert a decimal
  * @num: number
  * @nbr: nbr
  * @bs: base
@@ -17,7 +17,7 @@ void convert_to_base(unsigned long int num, char *nbr, int bs) {
 }
 
 /**
- * print_base - Function to print the converted number in the specified base
+ * print_base - Function to print the converted number
  * @nbr: number
  * @length: length
  * @heex: heex
@@ -61,7 +61,7 @@ int _print_hex(unsigned long int num, char heex) {
 	convert_to_base(num, nbr, bs);
 	print_base(nbr, bs, heex);
 
-	return bs;
+	return (bs);
 }
 
 /**
