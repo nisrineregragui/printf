@@ -20,7 +20,7 @@ return (i);
 adress = (unsigned long int)p;
 i += _putchar('0');
 i += _putchar('x');
-i += _print_hex(n, 'x');
+i += _print_hex(adress, 'x');
 return (i);
 }
 
