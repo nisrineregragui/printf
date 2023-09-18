@@ -23,7 +23,7 @@ int print_s(char *str)
 	if (s[i] <= 15)
 	{
         len += _putchar('0');
-        len += _print_hex(s[i], 'X');
+        len += _print_hex(str[i], 'X');
         }
 	}
 	else
