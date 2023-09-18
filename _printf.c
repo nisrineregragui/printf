@@ -70,8 +70,11 @@ int handle_format(char format, va_list args)
 		case 'i':
 			return (print_d(va_arg(args, int)));
 		case 'b':
+			return (_print_hex(va_arg(args, unsigned int), format));
 		case 'o':
+			return (_print_hex(va_arg(args, unsigned int), format));
 		case 'x':
+			return (_print_hex(va_arg(args, unsigned int), format));
 		case 'X':
 			return (_print_hex(va_arg(args, unsigned int), format));
 		case 'u':
