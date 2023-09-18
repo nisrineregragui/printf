@@ -20,7 +20,7 @@ int print_s(char *str)
 	len += _putchar('\\');
 	len += _putchar('\\');
         len += _putchar('x');
-	if (s[i] <= 15)
+	if (str[i] <= 15)
 	{
         len += _putchar('0');
         len += _print_hex(str[i], 'X');
