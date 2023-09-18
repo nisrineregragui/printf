@@ -11,7 +11,17 @@ int print_s(char *str)
 	int i, len = 0;
 
 	if (str == NULL)
-		str = "(null)";
+	{
+	_putchar('"');
+	_putchar('(');
+	_putchar('n');
+	_putchar('u');
+	_putchar('l');
+	_putchar('l');
+	_putchar(')');
+	_putchar('"');
+	return (8);
+	}
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
