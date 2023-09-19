@@ -35,7 +35,7 @@ int spec_string(char *str)
 
 
 /**
- * is_printable - check if char is printable
+ * _printable - check if char is printable
  * @c: char
  * Return: -1 or c
  */
