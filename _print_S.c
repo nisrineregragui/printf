@@ -2,9 +2,10 @@
 
 /**
  * spec_string - handle non printable chars
- * @s: string
+ * @str: string
  * Return: number of bytes
  */
+
 int spec_string(char *str)
 {
 	int i = 0;
