@@ -18,6 +18,8 @@ int print_u(unsigned int num);
 void convert_to_base(unsigned long int num, char *nbr, int bs);
 int print_hex(unsigned int n, unsigned int c);
 void print_base(char *nbr, int length, char heex);
+int spec_string(char *s);
+int _printable(char c);
 
 int print_x(va_list x);
 int print_X(va_list X);

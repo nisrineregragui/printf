@@ -79,6 +79,8 @@ int handle_format(char format, va_list args)
 			return (_print_hex(va_arg(args, unsigned int), format));
 		case 'u':
 			return (print_u(va_arg(args, unsigned int)));
+		case 'S':
+			return (spec_string(va_arg(args, char *)));
 		default:
 			return (handle_unknown_format(format));
 	}
